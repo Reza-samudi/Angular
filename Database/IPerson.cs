@@ -8,6 +8,10 @@ namespace Amoozeshyar.Database
         string Mobile { get; set;}
         string Address { get; set;}
         string Password { get; set; }
+        byte[] Salt { get; set; }
+        
+        
+        
         
         
     }

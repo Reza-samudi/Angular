@@ -10,8 +10,9 @@ namespace Amoozeshyar.Database
         public string Lastname { get ; set ; }
         public string gender { get ; set ; }
         public string Password { get ; set ; }
+        public byte[] Salt { get ; set ; }
         public ICollection<PreRegistration> PreRegistrations { get; set; }
         public ICollection<FinancialTransaction> FinancialTransactions { get; set; }
-        public ICollection<Register> Registers { get; set; }    
+        public ICollection<Register> Registers { get; set; }
     }
 }

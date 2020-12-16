@@ -12,7 +12,6 @@ namespace Amoozeshyar.Database
         public string Field { get; set; }
         public string Password { get; set; }
         public ICollection<Course> Courses { get; set; }
-        
-    
+        public byte[] Salt { get; set ; }
     }
 }

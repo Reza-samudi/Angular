@@ -44,7 +44,6 @@ namespace Amoozeshyar.Controllers
 
             return intern;
         }
-
         // PUT: api/Interns/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -54,9 +53,7 @@ namespace Amoozeshyar.Controllers
             {
                 return BadRequest();
             }
-
             _context.Entry(intern).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();
@@ -72,10 +69,8 @@ namespace Amoozeshyar.Controllers
                     throw;
                 }
             }
-
             return NoContent();
         }
-
         // POST: api/Interns
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -86,8 +81,6 @@ namespace Amoozeshyar.Controllers
         {
             rng.GetBytes(salt);
         }
-        
- 
         // derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
         string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
             password: registerRequest.Password,
@@ -95,13 +88,16 @@ namespace Amoozeshyar.Controllers
             prf: KeyDerivationPrf.HMACSHA1,
             iterationCount: 10000,
             numBytesRequested: 256 / 8));
+
+            
      
             var intern = new Intern {
                 Address="",
                 Mobile=registerRequest.Mobile,
                 Firstname=registerRequest.Firstname,
                 Lastname=registerRequest.Lastname,
-                Password=hashed
+                Password=hashed,
+                Salt=salt
             };
             try{
             _context.Interns.Add(intern);

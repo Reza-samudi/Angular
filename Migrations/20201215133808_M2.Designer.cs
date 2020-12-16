@@ -4,14 +4,16 @@ using Amoozeshyar.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Amoozeshyar.Migrations
 {
     [DbContext(typeof(AmoozeshyarDB))]
-    partial class AmoozeshyarDBModelSnapshot : ModelSnapshot
+    [Migration("20201215133808_M2")]
+    partial class M2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

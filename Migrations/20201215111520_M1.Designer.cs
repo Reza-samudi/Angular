@@ -4,14 +4,16 @@ using Amoozeshyar.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Amoozeshyar.Migrations
 {
     [DbContext(typeof(AmoozeshyarDB))]
-    partial class AmoozeshyarDBModelSnapshot : ModelSnapshot
+    [Migration("20201215111520_M1")]
+    partial class M1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,8 +141,8 @@ namespace Amoozeshyar.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Salt")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Salt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
@@ -179,8 +181,8 @@ namespace Amoozeshyar.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Salt")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Salt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
@@ -246,8 +248,8 @@ namespace Amoozeshyar.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Salt")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Salt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
