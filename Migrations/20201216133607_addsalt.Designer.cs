@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Amoozeshyar.Migrations
 {
     [DbContext(typeof(AmoozeshyarDB))]
-    [Migration("20201215121616_changesalt")]
-    partial class changesalt
+    [Migration("20201216133607_addsalt")]
+    partial class addsalt
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

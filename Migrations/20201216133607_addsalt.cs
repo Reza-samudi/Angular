@@ -1,15 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Amoozeshyar.Migrations
 {
-    public partial class M1 : Migration
+    public partial class addsalt : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
+            migrationBuilder.AddColumn<byte[]>(
                 name: "Salt",
                 table: "Professors",
-                type: "nvarchar(max)",
+                type: "varbinary(max)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
@@ -42,10 +43,10 @@ namespace Amoozeshyar.Migrations
                 type: "nvarchar(max)",
                 nullable: true);
 
-            migrationBuilder.AddColumn<string>(
+            migrationBuilder.AddColumn<byte[]>(
                 name: "Salt",
                 table: "Managers",
-                type: "nvarchar(max)",
+                type: "varbinary(max)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
@@ -54,10 +55,10 @@ namespace Amoozeshyar.Migrations
                 type: "nvarchar(max)",
                 nullable: true);
 
-            migrationBuilder.AddColumn<string>(
+            migrationBuilder.AddColumn<byte[]>(
                 name: "Salt",
                 table: "Interns",
-                type: "nvarchar(max)",
+                type: "varbinary(max)",
                 nullable: true);
         }
 
