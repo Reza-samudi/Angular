@@ -9,7 +9,7 @@ namespace Amoozeshyar.Database
         string Address { get; set;}
         string Password { get; set; }
         byte[] Salt { get; set; }
-        
+        string Role {get;}
         
         
         

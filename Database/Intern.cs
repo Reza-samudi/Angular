@@ -11,6 +11,7 @@ namespace Amoozeshyar.Database
         public string gender { get ; set ; }
         public string Password { get ; set ; }
         public byte[] Salt { get ; set ; }
+        public string Role {get {return "Intern" ;}}
         public ICollection<PreRegistration> PreRegistrations { get; set; }
         public ICollection<FinancialTransaction> FinancialTransactions { get; set; }
         public ICollection<Register> Registers { get; set; }

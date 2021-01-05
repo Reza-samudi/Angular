@@ -11,6 +11,7 @@ namespace Amoozeshyar.Database
         public string Address { get; set; }
         public string Password { get ; set ; }
         public byte[] Salt { get; set ; }
+        public string Role {get {return "Manager";}} //sefat moshtagh
         public ICollection<Course> Courses { get; set; }
     }
 }
